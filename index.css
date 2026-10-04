@@ -26,6 +26,19 @@ h3 {
     color: #D5D4D8;
 }
 
+#passwordLength {
+    margin-top: 20px;
+    background-color: #2F3E53;
+    border: none;
+    border-radius: 6px;
+    color: #FFFFFF;
+    padding: 4px;
+}
+
+label {
+    font-size: 14px;
+}
+
 hr {
     width: 100%;
     border: 1px solid #2F3E53;
@@ -39,7 +52,7 @@ button {
     height: 40px;
     width: 190px;
     font-size: 16px;
-    margin-top: 50px;
+    margin-top: 20px;
     color: #FFFFFF;
     padding: 9px 15px;
 }
