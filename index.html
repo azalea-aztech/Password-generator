@@ -15,9 +15,10 @@
         <button id="generateBtn" onclick="generatePasswords()">Generate passwords</button>
         <hr>
         <div id="passwords">
-            <p class="password" id="password1">password</p>
-            <p class="password" id="password2">password</p>
+            <p class="password" id="password1" onclick="copyToClipboard('password1')">password</p>
+            <p class="password" id="password2" onclick="copyToClipboard('password2')">password</p>
         </div>
+        <p id="copyAlert"></p>
         <script src="index.js"></script>
     </body>
 </html>

@@ -8,6 +8,8 @@ const passwordTwo = document.getElementById("password2");
 
 const passwordLenEL = document.getElementById("passwordLength");
 
+const copyAlertEl = document.getElementById("copyAlert");
+
 function generatePasswords() {
     let newPasswordOne = "";
     let newPasswordTwo = "";
@@ -24,4 +26,14 @@ function generatePasswords() {
 
 function randomCharacter() {
     return characters[Math.floor(Math.random() * characters.length)];
+}
+
+function copyToClipboard(elementId) {
+    let copiedText = document.getElementById(elementId);
+
+    copiedText.select();
+    copiedText.setSelectionRange(0, 99999); // mobile devices
+
+    navigator.clipboard.writeText(copiedText.value);
+    copyAlertEl.textContent = "Password copied!"
 }

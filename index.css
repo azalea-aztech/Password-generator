@@ -77,3 +77,7 @@ button:hover {
     align-items: center;
     color: #55F991;
 }
+
+#copyAlert {
+    text-align: center;
+}
