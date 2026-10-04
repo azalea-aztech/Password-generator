@@ -42,7 +42,7 @@ function generatePasswords() {
     } else {
         lenWarning.textContent = "Password length incorrect.";
     }
-    characters = [];
+    characters.length = 0;
     characters.push(...letters);
 }
 
