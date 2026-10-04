@@ -81,3 +81,7 @@ button:hover {
 #copyAlert {
     text-align: center;
 }
+
+#warning {
+    color: crimson;
+}

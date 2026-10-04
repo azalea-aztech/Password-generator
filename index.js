@@ -9,19 +9,27 @@ const passwordTwo = document.getElementById("password2");
 const passwordLenEL = document.getElementById("passwordLength");
 
 const copyAlertEl = document.getElementById("copyAlert");
+const lenWarning = document.getElementById("warning");
 
 function generatePasswords() {
     let newPasswordOne = "";
     let newPasswordTwo = "";
     passwordLength = passwordLenEL.value;
-    
-    for(let i = 0; i < passwordLength; i++) {
-        newPasswordOne += randomCharacter();
-        newPasswordTwo += randomCharacter();
-    }
 
-    passwordOne.textContent = newPasswordOne;
-    passwordTwo.textContent = newPasswordTwo;
+    if(passwordLength >= 8 && passwordLength <= 128) {
+        for(let i = 0; i < passwordLength; i++) {
+            newPasswordOne += randomCharacter();
+            newPasswordTwo += randomCharacter();
+        }
+
+        passwordOne.textContent = newPasswordOne;
+        passwordTwo.textContent = newPasswordTwo;
+        lenWarning.textContent = "";
+    } else {
+        lenWarning.textContent = "Password length incorrect.";
+    }
+    
+    
 }
 
 function randomCharacter() {
