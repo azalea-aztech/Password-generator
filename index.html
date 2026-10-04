@@ -12,6 +12,16 @@
             <label for="passwordLength">Password length (8-128 characters):</label>
             <input type="number" id="passwordLength" min="8" max="128" value="15">
         </div>
+        <div id="characterTypesDiv">
+            <div>
+                <input type="checkbox" id="typeNumbers">
+                <label for="typeNumbers">Include numbers</label>
+            </div>
+            <div>
+                <input type="checkbox" id="typeSymbols"> 
+                <label for="typeSymbols">Include symbols</label>
+            </div>
+        </div>
         <p id="warning"></p>
         <button id="generateBtn" onclick="generatePasswords()">Generate passwords</button>
         <hr>
